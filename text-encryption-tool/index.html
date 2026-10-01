@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encrypter & Decrypter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>CipherShield - Text Encryption Tool</h2>
+        <div class="input-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Enter text to encrypt or decrypt..."></textarea>
+        </div>
+        <div class="input-group">
+            <label for="key">Secret Key (Passphrase)</label>
+            <input type="password" id="key" placeholder="Enter secret key">
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-encrypt" onclick="encryptText()">Encrypt Text</button>
+            <button class="btn btn-decrypt" onclick="decryptText()">Decrypt Text</button>
+        </div>
+        <div class="input-group">
+            <label for="result">Output Result</label>
+            <textarea id="result" readonly placeholder="Result will appear here..."></textarea>
+            <button class="btn btn-copy" onclick="copyResult()">Copy Output</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
